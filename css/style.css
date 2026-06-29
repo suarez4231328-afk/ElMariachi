@@ -1,0 +1,97 @@
+/* :root es donde guardamos variables globales. */
+:root {
+    --rojo-mariachi: #E63946;
+    --verde-agave: #2A9D8F;
+    --amarillo-fiesta: #F4C430;
+    --negro-carbon: #121212;
+    --crema-maiz: #F5E9D4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: var(--negro-carbon);
+    color: var(--crema-maiz);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .logo {
+    width: 300px;
+    border: 1px solid red;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--crema-maiz);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--amarillo-fiesta);
+}
+
+.reserva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: black;
+}
+
+.icono-reserva {
+
+   background: transparent;
+}
+
+.icono-reserva {
+    width: 60px;
+    height: auto;
+}
+
+.btn-reserva {
+    background-color: var(--rojo-mariachi);
+    color: var(--crema-maiz);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(230, 57, 70, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-reserva:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(230, 57, 70, 0.45);
+}
