@@ -1,70 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>El Mariachi | Restaurante Mexicano</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="El Mariachi - Auténtica experiencia y cocina mexicana en el corazón de Vitoria-Gasteiz. Reserva tu mesa y disfruta de nuestros sabores tradicionales.">
+    <title>El Mariachi | Cocina Mexicana en Vitoria-Gasteiz</title>
+
+    <!-- Preconexión para optimizar la carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tu hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- La cabecera. 
 
-        Aquí irá:
-        Logo
-        Menú
-        Botón hamburguesa -->
-
-    <header class="header">
-        <div class="logo">
-            <a href="#" class="logo">
-
-                <h1>
-                    <img src="img/Logo.jpeg" alt="Restaurante El Mariachi Vitoria-Gasteiz" />
-                </h1>
-            </a>
+    <header class="navbar" id="navbar">
+        <div class="logo-container">
+            <!-- Nota: Un logo en .png o .svg es ideal para que tenga fondo transparente -->
+            <img src="img/Logo.jpeg" alt="Logotipo del Restaurante El Mariachi" class="logo">
         </div>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li>
-                    <a href="#">INICIO</a>
-                </li>
-                <li>
-                    <a href="#">NOSOTROS</a>
-                </li>
-                <li>
-                    <a href="#">MENÚ</a>
-                </li>
-                <li>
-                    <a href="#">GALERÍA</a>
-                </li>
-                <li>
-                    <a href="#">CONTACTO</a>
-                </li>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-container" id="navContainer">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" aria-label="Ir a la sección de inicio">INICIO</a></li>
+                <li><a href="#nosotros" aria-label="Ir a la sección nosotros">NOSOTROS</a></li>
+                <li><a href="#menu" aria-label="Ir a la sección de menú">MENÚ</a></li>
+                <li><a href="#galeria" aria-label="Ir a la sección de galería">GALERÍA</a></li>
+                <li><a href="#contacto" aria-label="Ir a la sección de contacto">CONTACTO</a></li>
             </ul>
-
         </nav>
-        <div class="reserva">
-            <img src="img/images-removebg-preview.png" alt="Sombrero mariachi" class="icono-reserva" />
-            <a href="#" class="btn-reserva"> RESERVAR MESA</a>
-        </div>
+        <button class="btn btn-primary btn-desktop" aria-label="Reservar una mesa en nuestro restaurante">RESERVAR
+            MESA</button>
     </header>
 
-    <!-- Contenido principal. 
+    <main>
+        <section id="inicio" class="hero">
+            <div class="overlay"></div>
 
-        Aquí irán:
-        Hero
-        Nosotros
-        Menú
-        Galería
-        Contacto -->
+            <div class="hero-content">
+                <h2 class="subtitle">AUTÉNTICA EXPERIENCIA</h2>
+                <h1 class="main-title">MEXICANA</h1>
+                <p class="location-text">
+                    <i class="fa-solid fa-diamond" aria-hidden="true"></i> EN EL CORAZÓN DE VITORIA-GASTEIZ <i
+                        class="fa-solid fa-diamond" aria-hidden="true"></i>
+                </p>
 
-    <main></main>
+                <div class="hero-buttons">
+                    <button class="btn btn-secondary" aria-label="Ver el menú de nuestro restaurante">VER MENÚ</button>
+                    <button class="btn btn-primary" aria-label="Reservar una mesa en nuestro restaurante">RESERVAR
+                        MESA</button>
+                </div>
+            </div>
 
-    <!-- Pie de página. -->
+            <!-- FEATURES INTEGRADOS EN LA SECCIÓN INICIO -->
+            <div class="features">
+                <div class="feature-item fade-in">
+                    <i class="fa-solid fa-bowl-food feature-icon" aria-hidden="true"></i>
+                    <span>INGREDIENTES<br>FRESCOS</span>
+                </div>
+                <div class="feature-item fade-in">
+                    <i class="fa-solid fa-fire-flame-curved feature-icon" aria-hidden="true"></i>
+                    <span>RECETAS<br>TRADICIONALES</span>
+                </div>
+                <div class="feature-item fade-in">
+                    <i class="fa-solid fa-hat-cowboy feature-icon" aria-hidden="true"></i>
+                    <span>AMBIENTE<br>AUTÉNTICO</span>
+                </div>
+                <div class="feature-item fade-in">
+                    <i class="fa-solid fa-guitar feature-icon" aria-hidden="true"></i>
+                    <span>MÚSICA Y<br>ALEGRÍA</span>
+                </div>
+            </div>
+        </section>
 
-    <footer></footer>
+        <!-- ========== SECCIÓN NOSOTROS ========== -->
+        <section id="nosotros" class="nosotros">
+            <div class="nosotros-container">
+                <div class="nosotros-content">
+                    <h2 class="section-title">NUESTRA HISTORIA</h2>
+                    <p class="nosotros-text">
+                        En <strong>El Mariachi</strong>, nos dedicamos a traer los sabores más auténticos de México a
+                        las mesas de Vitoria-Gasteiz.
+                        Desde 2015, hemos mantenido una promesa: preparar cada platillo con ingredientes frescos,
+                        recetas tradicionales y el alma mexicana.
+                    </p>
+                    <p class="nosotros-text">
+                        Nuestro equipo está formado por chefs con experiencia en cocina mexicana auténtica. Cada tacos,
+                        cada mole, cada margarita
+                        es preparada con dedicación y pasión. Creemos que comer debe ser una experiencia, no solo saciar
+                        el hambre.
+                    </p>
+                    <div class="nosotros-stats">
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Clientes Felices</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Platos Mexicanos</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>9 años</h3>
+                            <p>De Tradición</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-image">
+                    <div class="image-placeholder">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN MENÚ ========== -->
+        <section id="menu" class="menu">
+            <h2 class="section-title">NUESTRO MENÚ</h2>
+            <p class="section-subtitle">Sabores que transportan a México</p>
+
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="entradas">Entradas</button>
+                <button class="filter-btn" data-filter="platos">Platos Principales</button>
+                <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- ENTRADAS -->
+                <div class="menu-item" data-category="entradas">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3>Guacamole Tradicional</h3>
+                    <p class="menu-description">Palta, cebolla, cilantro y limón. Sin conservantes.</p>
+                    <span class="menu-price">€8,95</span>
+                </div>
+
+                <div class="menu-item" data-category="entradas">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-cheese"></i>
+                    </div>
+                    <h3>Nachos con Queso</h3>
+                    <p class="menu-description">Tortillas crujientes con queso fundido y jalapeños.</p>
+                    <span class="menu-price">€7,50</span>
+                </div>
+
+                <!-- PLATOS PRINCIPALES -->
+                <div class="menu-item" data-category="platos">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3>Tacos al Pastor</h3>
+                    <p class="menu-description">Carne marinada, piña, cebolla y cilantro en tortilla casera.</p>
+                    <span class="menu-price">€12,50</span>
+                </div>
+
+                <div class="menu-item" data-category="platos">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </div>
+                    <h3>Enchiladas Verdes</h3>
+                    <p class="menu-description">Tortillas rellenas de pollo con salsa verde y crema.</p>
+                    <span class="menu-price">€14,00</span>
+                </div>
+
+                <div class="menu-item" data-category="platos">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-pepper-hot"></i>
+                    </div>
+                    <h3>Chiles Rellenos</h3>
+                    <p class="menu-description">Chile poblano relleno de queso y salsa de tomate.</p>
+                    <span class="menu-price">€13,50</span>
+                </div>
+
+                <div class="menu-item" data-category="platos">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-fish"></i>
+                    </div>
+                    <h3>Ceviches Mixto</h3>
+                    <p class="menu-description">Pescado fresco, camarón, cítricos y cilantro.</p>
+                    <span class="menu-price">€15,95</span>
+                </div>
+
+                <!-- BEBIDAS -->
+                <div class="menu-item" data-category="bebidas">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-martini-glass"></i>
+                    </div>
+                    <h3>Margarita Clásica</h3>
+                    <p class="menu-description">Tequila, triple sec, limón fresco. Cremosa y refrescante.</p>
+                    <span class="menu-price">€9,50</span>
+                </div>
+
+                <div class="menu-item" data-category="bebidas">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3>Mojito Mexicano</h3>
+                    <p class="menu-description">Ron, menta, lima, azúcar y un toque de chile.</p>
+                    <span class="menu-price">€8,50</span>
+                </div>
+
+                <div class="menu-item" data-category="bebidas">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-wine-glass"></i>
+                    </div>
+                    <h3>Cerveza Mexicana</h3>
+                    <p class="menu-description">Selección de cervezas artesanales mexicanas.</p>
+                    <span class="menu-price">€4,50</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN GALERÍA ========== -->
+        <section id="galeria" class="galeria">
+            <h2 class="section-title">NUESTRA GALERÍA</h2>
+            <p class="section-subtitle">Visualiza la magia de nuestros platos</p>
+
+            <div class="galeria-grid">
+                <div class="galeria-item" data-image="1">
+                    <div class="galeria-placeholder">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <p>Tacos Auténticos</p>
+                    </div>
+                </div>
+
+                <div class="galeria-item" data-image="2">
+                    <div class="galeria-placeholder">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        <p>Enchiladas Verdes</p>
+                    </div>
+                </div>
+
+                <div class="galeria-item" data-image="3">
+                    <div class="galeria-placeholder">
+                        <i class="fa-solid fa-martini-glass"></i>
+                        <p>Margaritas Frescas</p>
+                    </div>
+                </div>
+
+                <div class="galeria-item" data-image="4">
+                    <div class="galeria-placeholder">
+                        <i class="fa-solid fa-leaf"></i>
+                        <p>Guacamole Fresco</p>
+                    </div>
+                </div>
+
+                <div class="galeria-item" data-image="5">
+                    <div class="galeria-placeholder">
+                        <i class="fa-solid fa-pepper-hot"></i>
+                        <p>Chiles Rellenos</p>
+                    </div>
+                </div>
+
+                <div class="galeria-item" data-image="6">
+                    <div class="galeria-placeholder">
+                        <i class="fa-solid fa-fish"></i>
+                        <p>Ceviches Frescos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN CONTACTO ========== -->
+        <section id="contacto" class="contacto">
+            <h2 class="section-title">CONTÁCTANOS</h2>
+            <p class="section-subtitle">¿Preguntas? Estamos aquí para ayudarte</p>
+
+            <div class="contacto-container">
+                <div class="contacto-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-map-pin"></i>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>Calle Principal, 42<br>01005 Vitoria-Gasteiz, España</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p><a href="tel:+34945123456">+34 945 123 456</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@elmariachi.es">info@elmariachi.es</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h3>Horario</h3>
+                            <p>Lunes a Jueves: 12:00 - 23:00<br>
+                                Viernes a Domingo: 12:00 - 00:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contacto-form" id="formularioContacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <span class="error-message" id="errorNombre"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="errorEmail"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto *</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                        <span class="error-message" id="errorAsunto"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        <span class="error-message" id="errorMensaje"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                        Enviar Mensaje
+                    </button>
+                    <span class="success-message" id="successMessage" style="display:none;"></span>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 El Mariachi - Vitoria-Gasteiz. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Tu script -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
